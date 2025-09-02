@@ -1,13 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Apply for number whitelist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Updates - Stay Connected</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .form-container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        input[type="tel"] {
+            width: 200px;
+        }
+        button {
+            background: #007cba;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005a87;
+        }
+        .legal-links {
+            font-size: 12px;
+            color: #666;
+            margin: 10px 0;
+        }
+        .consent-text {
+            font-size: 11px;
+            color: #555;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+        .checkbox-container {
+            margin: 15px 0;
+        }
+        .checkbox-container input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+        .checkbox-container label {
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Get Updates</h1>
-    <form netlify name="sms-signup">
-        <input type="tel" name="phone" placeholder="555-123-4567" required>
-        <button type="submit">Subscribe</button>
-    </form>
+    <h1>Get Text Updates</h1>
+    <p>Stay informed with important updates and notifications delivered directly to your phone.</p>
+    
+    <div class="form-container">
+        <form netlify name="sms-signup" action="/thank-you.html">
+            <div>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="555-123-4567" required>
+            </div>
+            
+            <div class="consent-text">
+                <strong>Message & Data Rates May Apply.</strong> By providing your phone number and clicking "Subscribe", you consent to receive text messages from us. Message frequency varies. You can opt out at any time by replying STOP. Reply HELP for help.
+            </div>
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">
+                    I agree to receive SMS messages and have read the 
+                    <a href="/terms.html">Terms of Service</a> and 
+                    <a href="/privacy.html">Privacy Policy</a>
+                </label>
+            </div>
+            
+            <button type="submit">Subscribe to Updates</button>
+        </form>
+    </div>
+    
+    <div class="legal-links">
+        <p>
+            <a href="/terms.html">Terms of Service</a> | 
+            <a href="/privacy.html">Privacy Policy</a> | 
+            <a href="/contact.html">Contact</a>
+        </p>
+        <p>© 2025 Your Business Name. All rights reserved.</p>
+    </div>
 </body>
 </html>
